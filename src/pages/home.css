@@ -1,0 +1,460 @@
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#ffffff;
+    overflow-x:hidden;
+    color:#3a3a3a;
+}
+
+:root{
+    --dark:#1c2430;
+    --light-heading:#d7d8db;
+    --muted-gray:#6f6f6f;
+    --text-gray:#3a3a3a;
+    --bg-light:#f6f6f7;
+}
+
+/* =========================================================
+   SECTION 1 — WELCOME HERO
+========================================================= */
+
+.welcome-hero{
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items:stretch;
+    overflow:hidden;
+}
+
+.welcome-image{
+    width:56%;
+    animation:slideInLeft 1.2s ease forwards;
+}
+
+.welcome-image img{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    display:block;
+}
+
+.welcome-right{
+    width:44%;
+    background:#f6f7f8;
+    display:flex;
+    align-items:flex-end;
+    padding:0 0 90px 100px;
+    animation:slideInRight 1.2s ease forwards;
+}
+
+.welcome-content{
+    padding-top:0;
+    max-width:490px;
+}
+
+.welcome-eyebrow{
+    font-size:12px;
+    letter-spacing:3px;
+    font-weight:600;
+    color:var(--dark);
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.welcome-content p{
+    font-size:13px;
+    line-height:1.8;
+    color:var(--text-gray);
+    margin-bottom:22px;
+    font-weight:400;
+}
+
+.welcome-title{
+    position:absolute;
+    top:8%;
+    left:28.5%;
+    right:5%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:22px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:90px;
+    font-weight:500;
+    line-height:1;
+    pointer-events:none;
+    animation:fadeUpTitle 1.4s ease forwards;
+}
+
+.welcome-title .title-dark{
+    color:#2b2b2b;
+}
+
+.welcome-title .title-light{
+    color:#d9dade;
+}
+
+/* entrance animations — run once on page load */
+
+@keyframes slideInLeft{
+    from{ opacity:0; transform:translateX(-90px); }
+    to{ opacity:1; transform:translateX(0); }
+}
+
+@keyframes slideInRight{
+    from{ opacity:0; transform:translateX(90px); }
+    to{ opacity:1; transform:translateX(0); }
+}
+
+@keyframes fadeUpTitle{
+    from{ opacity:0; transform:translateY(30px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+/* line button style: bordered box flanked by two vertical lines, like " | ABOUT US | " */
+
+.line-btn-wrap{
+    display:inline-flex;
+    align-items:stretch;
+    gap:16px;
+}
+
+.line-btn{
+    position:relative;
+    background:transparent;
+    border:1px solid var(--dark);
+    color:var(--dark);
+    padding:16px 30px;
+    font-size:12px;
+    letter-spacing:3px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.line-btn::before,
+.line-btn::after{
+    content:"";
+    position:absolute;
+    top:0;
+    height:100%;
+    width:1px;
+    background:var(--dark);
+}
+
+.line-btn::before{
+    left:-16px;
+}
+
+.line-btn::after{
+    right:-16px;
+}
+
+.line-btn:hover{
+    background:var(--dark);
+    color:#fff;
+}
+
+/* =========================================================
+   SECTION 2 — ART. BEAUTY. CREATIVITY. SLIDER
+========================================================= */
+
+.mud-slider{
+    width:100%;
+    background:var(--bg-light);
+    padding:90px 60px 70px;
+    text-align:center;
+}
+
+.slider-heading{
+    font-family:'Cormorant Garamond',serif;
+    font-size:54px;
+    font-weight:500;
+    color:var(--muted-gray);
+    margin-bottom:45px;
+}
+
+.slider-wrapper{
+    position:relative;
+    max-width:1800px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.slider-track{
+    width:100%;
+    display:flex;
+    gap:0;
+}
+
+.slide-item{
+    flex:1;
+    height:280px;
+    overflow:hidden;
+}
+
+.slide-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:grayscale(100%);
+    display:block;
+}
+
+.slider-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:transparent;
+    border:none;
+    font-size:22px;
+    color:#fff;
+    cursor:pointer;
+    z-index:5;
+    padding:10px;
+}
+
+.slider-arrow-left{ left:10px; }
+.slider-arrow-right{ right:10px; }
+
+.slider-dots{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin:28px 0 40px;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#c9c9c9;
+    display:inline-block;
+}
+
+.dot.active{
+    background:var(--dark);
+}
+
+.slider-caption{
+    max-width:1300px;
+    margin:0 auto;
+    font-size:15px;
+    line-height:1.9;
+    color:var(--text-gray);
+}
+
+/* =========================================================
+   SECTION 3 — CAREER PATHS / FIND A LOCATION BANNER
+========================================================= */
+
+.banner-split{
+    width:100%;
+    background:#ffffff;
+}
+
+.banner-images{
+    display:flex;
+    width:100%;
+}
+
+.banner-img-item{
+    width:50%;
+    height:260px;
+    overflow:hidden;
+}
+
+.banner-img-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    animation:autoZoom 9s ease-in-out infinite alternate;
+}
+
+/* continuous auto zoom loop for these two images */
+
+@keyframes autoZoom{
+    from{ transform:scale(1); }
+    to{ transform:scale(1.18); }
+}
+
+.banner-text-wrap{
+    display:flex;
+    padding:60px 40px 90px;
+    max-width:1600px;
+    margin:0 auto;
+}
+
+.banner-text-item{
+    width:50%;
+    text-align:center;
+    padding:0 60px;
+}
+
+.banner-text-item h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    font-weight:500;
+    color:var(--dark);
+    margin-bottom:22px;
+}
+
+.banner-text-item p{
+    font-size:15px;
+    line-height:1.8;
+    color:var(--text-gray);
+    margin-bottom:26px;
+}
+
+.box-btn{
+    background:transparent;
+    border:1px solid var(--dark);
+    color:var(--dark);
+    padding:14px 32px;
+    font-size:12px;
+    letter-spacing:3px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.box-btn:hover{
+    background:var(--dark);
+    color:#fff;
+}
+
+/* =========================================================
+   SECTION 4 — COURSES WORLDWIDE
+========================================================= */
+
+.courses-section{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:100px 90px;
+    gap:60px;
+}
+
+.courses-left{
+    width:40%;
+}
+
+.courses-eyebrow{
+    font-size:13px;
+    letter-spacing:4px;
+    font-weight:600;
+    color:var(--dark);
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.courses-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:56px;
+    font-weight:500;
+    color:var(--dark);
+    margin-bottom:26px;
+    line-height:1.05;
+}
+
+.courses-left p{
+    font-size:15px;
+    line-height:1.85;
+    color:var(--text-gray);
+    margin-bottom:30px;
+}
+
+.courses-right{
+    width:52%;
+    position:relative;
+    height:520px;
+}
+
+.courses-img-large{
+    position:absolute;
+    top:0;
+    right:0;
+    width:64%;
+    height:460px;
+}
+
+.courses-img-large img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.courses-img-small{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:42%;
+    height:290px;
+    z-index:2;
+}
+
+.courses-img-small img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:grayscale(100%);
+    display:block;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1200px){
+    .welcome-title{ font-size:60px; left:32%; }
+    .welcome-image img{ height:640px; }
+    .slider-heading{ font-size:40px; }
+    .courses-title{ font-size:42px; }
+}
+
+@media (max-width:992px){
+    .welcome-hero{ flex-direction:column; }
+    .welcome-image, .welcome-right{ width:100%; }
+    .welcome-image img{ height:420px; }
+    .welcome-title{
+        position:static;
+        padding:30px 24px 0;
+        font-size:48px;
+    }
+    .welcome-right{ padding:30px 24px 60px; }
+    .welcome-content{ padding-top:0; }
+
+    .banner-text-wrap{ flex-direction:column; }
+    .banner-text-item{ width:100%; padding:30px 20px; }
+    .banner-images{ flex-direction:column; }
+    .banner-img-item{ width:100%; }
+
+    .courses-section{ flex-direction:column; }
+    .courses-left, .courses-right{ width:100%; }
+    .courses-right{ height:420px; margin-top:40px; }
+}
+
+@media (max-width:600px){
+    .welcome-title{ font-size:34px; flex-direction:column; align-items:flex-start; gap:6px; }
+    .slider-track{ flex-direction:column; }
+    .slide-item{ height:220px; }
+    .slider-heading{ font-size:28px; }
+    .courses-title{ font-size:32px; }
+}
