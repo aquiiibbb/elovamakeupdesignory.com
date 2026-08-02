@@ -1,0 +1,374 @@
+/* ============================================
+   MUD Makeup Schools — Pixel Clone CSS
+   Fonts: Fraunces (serif headings) + Inter (body)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.ol-page {
+  font-family: 'Inter', sans-serif;
+  color: #3a3a3a;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------- Generic scroll-reveal ---------- */
+.ol-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ol-reveal.ol-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== HERO SECTION ===== */
+.ol-hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 640px;
+  overflow: hidden;
+}
+
+.ol-hero-image {
+  width: 55%;
+  min-height: 640px;
+  overflow: hidden;
+  clip-path: inset(0 100% 0 0);
+  animation: olImageReveal 1.1s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards;
+}
+
+.ol-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) contrast(1.05);
+  transform: scale(1.15);
+  animation: olImageZoomOut 1.3s cubic-bezier(0.65, 0, 0.35, 1) 0.15s forwards;
+}
+
+.ol-hero-right {
+  width: 45%;
+  background-color: #d9d8dd;
+  display: flex;
+  align-items: flex-end;
+  padding: 50px 60px 60px 50px;
+}
+
+.ol-hero-content {
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: olFadeUp 0.9s ease-out 0.95s forwards;
+}
+
+@keyframes olImageReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes olImageZoomOut {
+  from {
+    transform: scale(1.15);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes olFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ol-eyebrow {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2b2b33;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.ol-hero-content p {
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: #4a4a52;
+  margin-bottom: 32px;
+}
+
+.ol-hero-content strong {
+  font-weight: 700;
+  color: #2b2b33;
+}
+
+.ol-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #2b2b33;
+  text-decoration: none;
+}
+
+.ol-readmore .ol-bar {
+  width: 1px;
+  height: 16px;
+  background-color: #2b2b33;
+}
+
+.ol-hero-title {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 1.15;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  margin: 0;
+  pointer-events: none;
+  text-align: center;
+  clip-path: inset(0 100% 0 0);
+  animation: olTitleReveal 1s cubic-bezier(0.65, 0, 0.35, 1) 0.7s forwards;
+}
+
+.ol-title-light {
+  color: #ffffff;
+}
+
+.ol-title-dark {
+  color: #2b2b33;
+}
+
+@keyframes olTitleReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* ===== ABOUT SECTION ===== */
+.ol-about {
+  background-color: #f6f6f7;
+  padding: 60px 70px 80px 70px;
+  border-left: 6px solid #d3d3d6;
+}
+
+.ol-about-heading {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 34px;
+  color: #2b2b33;
+  margin: 0 0 40px 0;
+}
+
+.ol-about-body h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e1e22;
+  margin: 36px 0 14px 0;
+}
+
+.ol-about-body > div:first-child h3 {
+  margin-top: 0;
+}
+
+.ol-about-body p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #46464d;
+  margin: 0 0 14px 0;
+  max-width: 1300px;
+}
+
+.ol-about-body a {
+  color: #3a5a9c;
+  text-decoration: underline;
+}
+
+.ol-link-line {
+  margin-bottom: 4px !important;
+}
+
+.ol-find-block {
+  margin-top: 30px;
+}
+
+.ol-find-block h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 28px;
+  color: #2b2b33;
+  margin: 0 0 16px 0;
+}
+
+/* ===== CTA SECTION ===== */
+.ol-cta {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 460px;
+  background-color: #d9d8dd;
+  padding: 60px 60px;
+  gap: 60px;
+}
+
+.ol-cta-image-wrap {
+  width: 42%;
+}
+
+.ol-cta-image {
+  position: relative;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ol-cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ol-dot {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ol-dot-1 {
+  top: 6%;
+  left: 12%;
+}
+.ol-dot-2 {
+  top: 8%;
+  left: 44%;
+}
+.ol-dot-3 {
+  top: 34%;
+  left: 26%;
+}
+.ol-dot-4 {
+  top: 38%;
+  left: 62%;
+}
+.ol-dot-5 {
+  top: 60%;
+  left: 8%;
+}
+.ol-dot-6 {
+  top: 62%;
+  left: 42%;
+}
+
+.ol-cta-content {
+  width: 58%;
+}
+
+.ol-cta-content h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.25;
+  color: #2b2b33;
+  margin: 0 0 24px 0;
+}
+
+.ol-cta-content p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #4a4a52;
+  max-width: 620px;
+  margin: 0 0 20px 0;
+}
+
+.ol-cta-content a {
+  color: #2b2b33;
+  text-decoration: underline;
+}
+
+.ol-cta-links {
+  font-size: 15px;
+  color: #2b2b33;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .ol-hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .ol-hero-image,
+  .ol-hero-right {
+    width: 100%;
+  }
+
+  .ol-hero-image {
+    min-height: 380px;
+  }
+
+  .ol-hero-right {
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .ol-hero-title {
+    top: 40%;
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .ol-about {
+    padding: 40px 24px;
+  }
+
+  .ol-cta {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .ol-cta-image-wrap,
+  .ol-cta-content {
+    width: 100%;
+  }
+
+  .ol-cta-content h2 {
+    font-size: 28px;
+  }
+}

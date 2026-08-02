@@ -16,11 +16,11 @@ const NAV_ITEMS = [
     label: 'EDUCATION',
     href: '#',
     items: [
-      { label: 'CAREERS PATHS', href: '/careers-paths' },
-      { label: 'STUDY AT MUD', href: '/study-at-mud' },
-      { label: 'OUR CURRICULUM', href: '/our-curriculum' },
+      { label: 'CAREERS PATHS', href: '/careerpath' },
+      { label: 'STUDY AT MUD', href: '/studymud' },
+      { label: 'OUR CURRICULUM', href: '/ourcurriculam' },
       { label: 'COURSE LISTINGS', href: '/course-listings', hasArrow: true },
-      { label: 'OUR LOCATIONS', href: '/our-locations' },
+      { label: 'OUR LOCATIONS', href: '/ourlocation' },
     ],
   },
   {
