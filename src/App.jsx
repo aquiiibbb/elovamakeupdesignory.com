@@ -9,7 +9,10 @@ import CareerPath from './pages/carrerpath'
 import StudyMud from './pages/studymud'
 import Curriculam from './pages/ourcurriculam'
 import Ourlocation from './pages/ourlocation'
-
+import Ourproduction from './pages/ourproduction'
+import WhereToBuy from './pages/wheretobuy'
+import Mudblog from './pages/mudblog'
+import Mekupdesitory from './pages/mekupdesitory'
 function App() {
   return (
     <>
@@ -23,6 +26,10 @@ function App() {
         <Route path="/studymud" element={<StudyMud />} />
         <Route path="/ourcurriculam" element={<Curriculam />} />
         <Route path="/ourlocation" element={<Ourlocation />} />
+        <Route path="/ourproduction" element={<Ourproduction />} />
+        <Route path="/wheretobuy" element={<WhereToBuy />} />
+        <Route path="/mudblog" element={<Mudblog />} />
+        <Route path="/mekupdesitory" element={<Mekupdesitory />} />
       </Routes>
       <Footer />
     </>
