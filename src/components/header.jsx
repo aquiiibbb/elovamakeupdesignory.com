@@ -31,15 +31,15 @@ const NAV_ITEMS = [
       { label: 'WHERE TO BUY', href: '/wheretobuy' },
       { label: 'MUD BLOG', href: '/mudblog' },
       { label: 'MUD ART MAGAZINE', href: '/mekupdesitory' },
-      { label: 'SCHOOL COLLABORATION', href: '/school-collaboration' },
-      { label: 'BECOME A RETAILER', href: '/become-a-retailer' },
+      { label: 'SCHOOL COLLABORATION', href: '/schoolcollaboration' },
+      { label: 'BECOME A RETAILER', href: '/becomearetailer' },
     ],
   },
   {
     label: 'FIND US',
     href: '#',
     items: [
-      { label: 'MUD DIRECTORY', href: '/mud-directory' },
+      { label: 'MUD DIRECTORY', href: '/muddirectory' },
       { label: 'MUD LOCATOR', href: '/mud-locator' },
       { label: 'CONTACT US', href: '/contact-us' },
     ],

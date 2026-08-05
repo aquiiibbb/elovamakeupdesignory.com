@@ -1,0 +1,427 @@
+/* ============================
+   FONTS
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+.mudDir-page {
+  font-family: 'Inter', sans-serif;
+  color: #1a2340;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================
+   SCROLL REVEAL
+============================ */
+.mudDir-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.mudDir-reveal.mudDir-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mudDir-reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.mudDir-reveal-left.mudDir-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================
+   HERO SECTION
+============================ */
+.mudDir-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+  background: #ececec;
+}
+
+.mudDir-hero-image {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.mudDir-hero-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mudDir-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 70px;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+.mudDir-hero-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 1.1;
+  margin: 0 0 40px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.mudDir-hero-title-dark,
+.mudDir-hero-title-light {
+  display: inline-block;
+}
+
+.mudDir-hero-title-dark {
+  color: #1a1a1a;
+}
+
+.mudDir-hero-title-light {
+  color: #cfcfcf;
+}
+
+/* Pull the title left so "MUD" visually overlaps the hero image edge,
+   matching the original site's overlapping headline treatment */
+@media (min-width: 1025px) {
+  .mudDir-hero-title {
+    margin-left: -220px;
+  }
+}
+
+.mudDir-hero-text {
+  max-width: 480px;
+}
+
+.mudDir-hero-subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #24356b;
+  margin: 0 0 18px 0;
+}
+
+.mudDir-hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #2a2a2a;
+  margin: 0 0 26px 0;
+}
+
+.mudDir-read-more {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1a2340;
+  text-decoration: none;
+  padding-right: 18px;
+  border-right: 1px solid #1a2340;
+  text-transform: uppercase;
+}
+
+.mudDir-read-more:hover {
+  color: #24356b;
+}
+
+/* ============================
+   FIND A LOCATION - FILTER BAR
+============================ */
+.mudDir-filter-section {
+  background: #ececec;
+}
+
+.mudDir-filter-banner {
+  background: #7f7f7f;
+  padding: 45px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.mudDir-filter-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.mudDir-filter-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #f1f1f1;
+  max-width: 780px;
+  margin: 6px 0 0 0;
+  flex: 1 1 400px;
+}
+
+.mudDir-filter-link {
+  color: #cfe0ff;
+  text-decoration: underline;
+}
+
+.mudDir-filter-link:hover {
+  color: #ffffff;
+}
+
+.mudDir-filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 30px 60px 40px 60px;
+}
+
+.mudDir-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 150px;
+}
+
+.mudDir-filter-field label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1a2340;
+}
+
+.mudDir-filter-field select {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  border: 1px solid #b8b8bd;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #1a2340;
+  cursor: pointer;
+}
+
+.mudDir-filter-field select:focus {
+  outline: 2px solid #24356b;
+  outline-offset: 1px;
+}
+
+/* ============================
+   LOCATION CARDS GRID
+============================ */
+.mudDir-grid-section {
+  background: #ececec;
+  padding: 20px 60px 60px 60px;
+}
+
+.mudDir-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 40px;
+}
+
+.mudDir-card {
+  position: relative;
+  min-height: 260px;
+}
+
+.mudDir-card-image {
+  width: 55%;
+  height: 220px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.mudDir-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mudDir-card-info {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 62%;
+  background: #ffffff;
+  padding: 22px 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.mudDir-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a2340;
+  margin: 0 0 10px 0;
+}
+
+.mudDir-card-desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #3a3a3a;
+  margin: 0;
+}
+
+.mudDir-card-link {
+  color: #8a6d3b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mudDir-card-link:hover {
+  text-decoration: underline;
+}
+
+.mudDir-no-results {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  padding: 60px 0;
+}
+
+/* ============================
+   PAGINATION
+============================ */
+.mudDir-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 50px;
+}
+
+.mudDir-page-btn,
+.mudDir-page-arrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #cfcfd3;
+  color: #24356b;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mudDir-page-btn:hover,
+.mudDir-page-arrow:hover {
+  background: #e4e4e8;
+}
+
+.mudDir-page-btn-active {
+  background: #2b8fd1;
+  border-color: #2b8fd1;
+  color: #ffffff;
+}
+
+.mudDir-page-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ============================
+   GRAY CTA TEXT SECTION
+============================ */
+.mudDir-cta {
+  background: #85858a;
+  padding: 45px 60px;
+  margin: 0 60px 60px 60px;
+}
+
+.mudDir-cta-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #f5f5f5;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 1024px) {
+  .mudDir-hero-title {
+    font-size: 2.8rem;
+  }
+
+  .mudDir-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .mudDir-card-image {
+    width: 45%;
+  }
+
+  .mudDir-card-info {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mudDir-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .mudDir-hero-image {
+    min-height: 340px;
+  }
+
+  .mudDir-hero-content {
+    padding: 40px 24px;
+  }
+
+  .mudDir-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .mudDir-filter-banner {
+    padding: 30px 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mudDir-filter-controls {
+    padding: 24px 24px 30px 24px;
+  }
+
+  .mudDir-grid-section {
+    padding: 20px 24px 40px 24px;
+  }
+
+  .mudDir-card {
+    min-height: 320px;
+  }
+
+  .mudDir-card-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .mudDir-card-info {
+    position: relative;
+    top: -30px;
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .mudDir-cta {
+    margin: 0 24px 40px 24px;
+    padding: 30px 24px;
+  }
+}

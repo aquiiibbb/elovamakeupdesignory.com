@@ -13,6 +13,9 @@ import Ourproduction from './pages/ourproduction'
 import WhereToBuy from './pages/wheretobuy'
 import Mudblog from './pages/mudblog'
 import Mekupdesitory from './pages/mekupdesitory'
+import SchoolCollaboration from './pages/schoolcollaboration'
+import BecomeARetailer from './pages/becomearetailer'
+import Muddirectory from './pages/muddirectory'
 function App() {
   return (
     <>
@@ -30,6 +33,9 @@ function App() {
         <Route path="/wheretobuy" element={<WhereToBuy />} />
         <Route path="/mudblog" element={<Mudblog />} />
         <Route path="/mekupdesitory" element={<Mekupdesitory />} />
+        <Route path="/schoolcollaboration" element={<SchoolCollaboration />} />
+        <Route path="/becomearetailer" element={<BecomeARetailer />} />
+        <Route path="/muddirectory" element={<Muddirectory />} />
       </Routes>
       <Footer />
     </>
