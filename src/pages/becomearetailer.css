@@ -1,0 +1,198 @@
+/* ============================
+   FONTS
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+.elovaaRP-page {
+  font-family: 'Inter', sans-serif;
+  color: #1a2340;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================
+   SCROLL REVEAL ANIMATION
+============================ */
+.elovaaRP-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.elovaaRP-reveal.elovaaRP-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elovaaRP-reveal-title {
+  transform: translateX(-60px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.elovaaRP-reveal-title.elovaaRP-visible {
+  transform: translateX(0);
+}
+
+/* ============================
+   HERO SECTION
+============================ */
+.elovaaRP-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 720px;
+  background: #d6d5dd;
+}
+
+.elovaaRP-hero-image {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.elovaaRP-hero-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.elovaaRP-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 70px 60px 60px;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+.elovaaRP-hero-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 4.2rem;
+  line-height: 1.05;
+  color: #ffffff;
+  margin: 0 0 40px 0;
+  letter-spacing: 0.5px;
+}
+
+.elovaaRP-hero-text {
+  max-width: 480px;
+}
+
+.elovaaRP-hero-subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #24356b;
+  margin: 0 0 18px 0;
+}
+
+.elovaaRP-hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #2a2a2a;
+  margin: 0 0 26px 0;
+}
+
+.elovaaRP-read-more {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1a2340;
+  text-decoration: none;
+  padding-right: 18px;
+  border-right: 1px solid #1a2340;
+  text-transform: uppercase;
+}
+
+.elovaaRP-read-more:hover {
+  color: #24356b;
+}
+
+/* ============================
+   HEADING STRIP
+============================ */
+.elovaaRP-heading-strip {
+  background: #f7f7f8;
+  padding: 55px 60px;
+}
+
+.elovaaRP-heading-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #2a2a2a;
+  margin: 0;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================
+   GRAY INFO SECTION
+============================ */
+.elovaaRP-info {
+  background: #d6d5dd;
+  padding: 50px 60px 70px 60px;
+}
+
+.elovaaRP-info-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #24356b;
+  max-width: 1400px;
+  margin: 0 auto 20px auto;
+}
+
+.elovaaRP-info-link {
+  color: #2255a4;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.elovaaRP-info-link:hover {
+  color: #16386f;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 1024px) {
+  .elovaaRP-hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .elovaaRP-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .elovaaRP-hero-image {
+    min-height: 380px;
+  }
+
+  .elovaaRP-hero-content {
+    padding: 40px 24px;
+  }
+
+  .elovaaRP-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .elovaaRP-heading-strip {
+    padding: 40px 24px;
+  }
+
+  .elovaaRP-heading-title {
+    font-size: 1.8rem;
+  }
+
+  .elovaaRP-info {
+    padding: 30px 24px 50px 24px;
+  }
+}

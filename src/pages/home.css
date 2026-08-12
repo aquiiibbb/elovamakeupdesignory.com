@@ -1,0 +1,785 @@
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #ffffff;
+  overflow-x: hidden;
+  color: #3a3a3a;
+}
+
+:root {
+  --dark: #1c2430;
+  --light-heading: #d7d8db;
+  --muted-gray: #6f6f6f;
+  --text-gray: #3a3a3a;
+  --bg-light: #f6f6f7;
+}
+
+
+/* =========================================================
+   SECTION 1 — WELCOME HERO
+========================================================= */
+
+.welcome-hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.welcome-image {
+  width: 50%;
+  animation: slideInLeft 1.2s ease forwards;
+}
+
+.welcome-image img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.welcome-right {
+  width: 44%;
+  background: #f6f7f8;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 90px 100px;
+  animation: slideInRight 1.2s ease forwards;
+}
+
+.welcome-content {
+  max-width: 490px;
+}
+
+.welcome-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--dark);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.welcome-content p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+.welcome-title {
+  position: absolute;
+  top: 8%;
+  left: 28.5%;
+  right: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 22px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 90px;
+  font-weight: 500;
+  line-height: 1;
+  pointer-events: none;
+  animation: fadeUpTitle 1.4s ease forwards;
+}
+
+.title-dark {
+  color: #2b2b2b;
+}
+
+.title-light {
+  color: #d9dade;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.line-btn-wrap {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.line-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  padding: 16px 30px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.line-btn::before,
+.line-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: var(--dark);
+}
+
+.line-btn::before {
+  left: -16px;
+}
+
+.line-btn::after {
+  right: -16px;
+}
+
+.line-btn:hover {
+  background: var(--dark);
+  color: #ffffff;
+}
+
+.box-btn {
+  background: transparent;
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  padding: 14px 32px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.box-btn:hover {
+  background: var(--dark);
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION 2 — AUTO HORIZONTAL IMAGE SLIDER
+========================================================= */
+
+.elovaa-scroll-section {
+  width: 100%;
+  background: var(--bg-light);
+  padding: 75px 0 65px;
+  overflow: hidden;
+}
+
+
+/* Heading */
+
+.scroll-heading-wrap {
+  text-align: center;
+  padding: 0 30px;
+  margin-bottom: 38px;
+}
+
+.slider-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--muted-gray);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.scroll-small-text {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888888;
+}
+
+
+/* =========================================================
+   IMAGE AUTO SCROLL
+========================================================= */
+
+.image-scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-scroll-track {
+  display: flex;
+  width: max-content;
+
+  /*
+    IMPORTANT:
+
+    We have two identical sets of images.
+
+    50% movement = exactly one complete set.
+    Therefore the animation restarts invisibly.
+  */
+
+  animation: autoHorizontalScroll 32s linear infinite;
+}
+
+
+/* Pause when mouse is over gallery */
+
+.image-scroll-wrapper:hover .image-scroll-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================================
+   IMAGE ITEM
+========================================================= */
+
+.scroll-image-item {
+  flex: 0 0 30vw;
+  width: 30vw;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  filter: grayscale(100%);
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+
+/* Image hover */
+
+.scroll-image-item:hover img {
+  transform: scale(1.06);
+  filter: grayscale(0%);
+}
+
+
+/* =========================================================
+   AUTO SLIDE ANIMATION
+========================================================= */
+
+@keyframes autoHorizontalScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   SECTION 2 DESCRIPTION
+========================================================= */
+
+.slider-caption {
+  max-width: 1200px;
+  margin: 45px auto 0;
+  padding: 0 30px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-gray);
+}
+
+
+/* =========================================================
+   SECTION 3 — CAREER PATHS
+========================================================= */
+
+.banner-split {
+  width: 100%;
+  background: #ffffff;
+}
+
+.banner-images {
+  display: flex;
+  width: 100%;
+}
+
+.banner-img-item {
+  width: 50%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner-img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: autoZoom 9s ease-in-out infinite alternate;
+}
+
+
+/* Image zoom */
+
+@keyframes autoZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.12);
+  }
+}
+
+
+/* =========================================================
+   CAREER TEXT
+========================================================= */
+
+.banner-text-wrap {
+  display: flex;
+  padding: 70px 40px 100px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.banner-text-item {
+  width: 50%;
+  text-align: center;
+  padding: 0 60px;
+}
+
+.banner-text-item h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 22px;
+}
+
+.banner-text-item p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 26px;
+}
+
+
+/* =========================================================
+   SECTION 4 — COURSES
+========================================================= */
+
+.courses-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 110px 90px;
+  gap: 70px;
+}
+
+.courses-left {
+  width: 40%;
+}
+
+.courses-eyebrow {
+  font-size: 13px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: var(--dark);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.courses-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 26px;
+  line-height: 1.05;
+}
+
+.courses-left p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-gray);
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   COURSES IMAGES
+========================================================= */
+
+.courses-right {
+  width: 52%;
+  position: relative;
+  height: 520px;
+}
+
+.courses-img-large {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64%;
+  height: 460px;
+  overflow: hidden;
+}
+
+.courses-img-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.courses-img-small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 42%;
+  height: 290px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.courses-img-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  display: block;
+}
+
+
+/* =========================================================
+   PAGE LOAD ANIMATIONS
+========================================================= */
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUpTitle {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .welcome-title {
+    font-size: 65px;
+    left: 32%;
+  }
+
+  .welcome-image img {
+    height: 640px;
+  }
+
+  .slider-heading {
+    font-size: 44px;
+  }
+
+  .scroll-image-item {
+    flex-basis: 40vw;
+    width: 40vw;
+    height: 230px;
+  }
+
+  .courses-title {
+    font-size: 46px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+  /* Hero */
+
+  .welcome-hero {
+    flex-direction: column;
+  }
+
+  .welcome-image,
+  .welcome-right {
+    width: 100%;
+  }
+
+  .welcome-image img {
+    height: 420px;
+    object-position: center center;
+  }
+
+  .welcome-title {
+    position: static;
+    padding: 30px 24px 10px;
+    font-size: 48px;
+  }
+
+  .welcome-right {
+    padding: 30px 24px 60px;
+  }
+
+  .welcome-content {
+    max-width: 700px;
+  }
+
+
+  /* Auto slider */
+
+  .elovaa-scroll-section {
+    padding-top: 65px;
+  }
+
+  .slider-heading {
+    font-size: 40px;
+  }
+
+  .scroll-image-item {
+    flex-basis: 55vw;
+    width: 55vw;
+    height: 220px;
+  }
+
+  .image-scroll-track {
+    animation-duration: 28s;
+  }
+
+
+  /* Career */
+
+  .banner-images {
+    flex-direction: column;
+  }
+
+  .banner-img-item {
+    width: 100%;
+    height: 280px;
+  }
+
+  .banner-text-wrap {
+    flex-direction: column;
+  }
+
+  .banner-text-item {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+
+  /* Courses */
+
+  .courses-section {
+    flex-direction: column;
+    padding: 80px 40px;
+  }
+
+  .courses-left,
+  .courses-right {
+    width: 100%;
+  }
+
+  .courses-right {
+    height: 500px;
+    margin-top: 30px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* =====================================================
+     HERO MOBILE
+  ===================================================== */
+
+  .welcome-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .welcome-image img {
+    width: 100%;
+    height: 330px;
+
+    /*
+      IMPORTANT MOBILE FIX:
+      Image ko thoda right side se crop kar rahe hain,
+      jisse girl center me visible rahegi.
+    */
+    object-fit: cover;
+    object-position: 65% center;
+  }
+
+  .welcome-title {
+    font-size: 38px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .welcome-right {
+    padding: 30px 22px 50px;
+  }
+
+  .welcome-content p {
+    font-size: 12px;
+  }
+
+
+  /* =====================================================
+     AUTO SLIDER
+  ===================================================== */
+
+  .elovaa-scroll-section {
+    padding: 55px 0 55px;
+  }
+
+  .scroll-heading-wrap {
+    padding: 0 20px;
+    margin-bottom: 28px;
+  }
+
+  .slider-heading {
+    font-size: 32px;
+  }
+
+  .scroll-small-text {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .scroll-image-item {
+    flex-basis: 75vw;
+    width: 75vw;
+    height: 190px;
+  }
+
+  .image-scroll-track {
+    animation-duration: 22s;
+  }
+
+  .slider-caption {
+    font-size: 13px;
+    padding: 0 22px;
+    margin-top: 35px;
+  }
+
+
+  /* =====================================================
+     CAREER
+  ===================================================== */
+
+  .banner-img-item {
+    height: 230px;
+  }
+
+  .banner-text-wrap {
+    padding: 40px 20px 60px;
+  }
+
+  .banner-text-item h2 {
+    font-size: 40px;
+  }
+
+  .banner-text-item p {
+    font-size: 13px;
+  }
+
+
+  /* =====================================================
+     COURSES
+  ===================================================== */
+
+  .courses-section {
+    padding: 65px 22px;
+    gap: 40px;
+  }
+
+  .courses-title {
+    font-size: 38px;
+  }
+
+  .courses-left p {
+    font-size: 13px;
+  }
+
+  .courses-right {
+    height: 350px;
+  }
+
+  .courses-img-large {
+    width: 75%;
+    height: 300px;
+  }
+
+  .courses-img-small {
+    width: 48%;
+    height: 190px;
+  }
+}

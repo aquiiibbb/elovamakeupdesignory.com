@@ -1,0 +1,276 @@
+/* =========================================================
+   GOOGLE FONTS — HIRE ARTIST PAGE (unique scope: ha-*)
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.ha-hero, .ha-intro, .ha-form-section{
+    font-family:'Montserrat',sans-serif;
+    box-sizing:border-box;
+}
+
+.ha-hero *, .ha-intro *, .ha-form-section *{
+    box-sizing:border-box;
+}
+
+:root{
+    --ha-dark:#1c2430;
+    --ha-rose:#b97285;
+    --ha-input-bg:#e9e9e9;
+    --ha-text-gray:#3a3a3a;
+    --ha-required:#c0392b;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ha-hero{
+    position:relative;
+    width:100%;
+    min-height:640px;
+    background:
+        linear-gradient(rgba(10,10,12,0.55), rgba(10,10,12,0.65)),
+        url("https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+}
+
+.ha-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:28px 50px;
+}
+
+.ha-nav-icon{
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.ha-nav-logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color:#e4e0d8;
+}
+
+.ha-logo-mark{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    font-weight:600;
+    letter-spacing:4px;
+}
+
+.ha-logo-sub{
+    font-size:11px;
+    letter-spacing:1px;
+    margin-top:2px;
+    color:#cfcac0;
+}
+
+.ha-nav-menu{
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:600;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.ha-menu-icon{
+    font-size:16px;
+}
+
+.ha-hero-content{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.ha-hero-content h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    font-weight:500;
+    color:#ffffff;
+}
+
+.ha-hero-accent-line{
+    position:absolute;
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-40px);
+    width:2px;
+    height:80px;
+    background:var(--ha-rose);
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.ha-intro{
+    width:100%;
+    background:#ffffff;
+    padding:100px 60px 50px;
+    text-align:center;
+}
+
+.ha-intro p{
+    max-width:700px;
+    margin:0 auto;
+    font-size:17px;
+    line-height:1.7;
+    color:var(--ha-text-gray);
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.ha-form-section{
+    width:100%;
+    background:#ffffff;
+    padding:20px 60px 90px;
+}
+
+.ha-form{
+    max-width:1050px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.ha-row{
+    display:grid;
+    gap:30px;
+}
+
+.ha-row-1{ grid-template-columns:1fr; }
+.ha-row-2{ grid-template-columns:1fr 1fr; }
+.ha-row-3{ grid-template-columns:1fr 1fr 1fr; }
+
+.ha-field{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+
+.ha-field label{
+    font-size:13px;
+    font-weight:700;
+    color:var(--ha-dark);
+    margin-bottom:8px;
+}
+
+.ha-required{
+    color:var(--ha-required);
+    margin-left:2px;
+}
+
+.ha-field input,
+.ha-field textarea{
+    background:var(--ha-input-bg);
+    border:1px solid #d5d5d5;
+    padding:14px 16px;
+    font-size:14px;
+    font-family:'Montserrat',sans-serif;
+    color:var(--ha-text-gray);
+    outline:none;
+}
+
+.ha-field input:focus,
+.ha-field textarea:focus{
+    border-color:var(--ha-rose);
+}
+
+.ha-field textarea{
+    resize:vertical;
+    min-height:160px;
+}
+
+.ha-date-input,
+.ha-phone-input{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.ha-date-input input,
+.ha-phone-input input{
+    width:100%;
+    padding-left:44px;
+}
+
+.ha-phone-input input{
+    padding-left:16px;
+    padding-right:44px;
+}
+
+.ha-field-icon{
+    position:absolute;
+    left:14px;
+    font-size:15px;
+    pointer-events:none;
+}
+
+.ha-flag{
+    position:absolute;
+    right:14px;
+    font-size:16px;
+    pointer-events:none;
+}
+
+.ha-char-count{
+    align-self:flex-end;
+    font-size:12px;
+    color:#8a8a8a;
+    margin-top:6px;
+}
+
+.ha-submit-btn{
+    align-self:flex-start;
+    background:var(--ha-rose);
+    color:#ffffff;
+    border:none;
+    padding:16px 44px;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.ha-submit-btn:hover{
+    background:#a35c70;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:900px){
+    .ha-row-3{ grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width:768px){
+    .ha-hero{ min-height:520px; }
+    .ha-hero-content h1{ font-size:42px; }
+    .ha-nav{ padding:20px 24px; }
+    .ha-logo-sub{ display:none; }
+    .ha-intro{ padding:70px 24px 40px; }
+    .ha-form-section{ padding:20px 24px 60px; }
+    .ha-row-2, .ha-row-3{ grid-template-columns:1fr; }
+}

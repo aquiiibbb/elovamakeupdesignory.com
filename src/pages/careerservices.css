@@ -1,0 +1,395 @@
+/* =========================================================
+   GOOGLE FONTS — CAREER SERVICES PAGE (unique scope: cs-*)
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.cs-hero, .cs-gateway, .cs-directories, .cs-how, .cs-hire{
+    font-family:'Montserrat',sans-serif;
+    box-sizing:border-box;
+}
+
+.cs-hero *, .cs-gateway *, .cs-directories *, .cs-how *, .cs-hire *{
+    box-sizing:border-box;
+}
+
+:root{
+    --cs-dark:#1c2430;
+    --cs-charcoal:#1f1f1f;
+    --cs-lavender:#d6d6db;
+    --cs-off-white:#fafafa;
+    --cs-bg-light:#f6f6f7;
+    --cs-text-gray:#3a3a3a;
+    --cs-link:#3b5bdb;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.cs-reveal{
+    opacity:0;
+    transition:opacity 1s ease, transform 1s ease;
+}
+
+.cs-reveal.cs-slide-left{ transform:translateX(-70px); }
+.cs-reveal.cs-slide-right{ transform:translateX(70px); }
+.cs-reveal.cs-fade-up{ transform:translateY(50px); }
+
+.cs-reveal.cs-in-view{
+    opacity:1;
+    transform:translate(0,0);
+}
+
+/* =========================================================
+   SECTION 1 — HERO
+========================================================= */
+
+.cs-hero{
+    width:100%;
+    background:var(--cs-lavender);
+    padding:0 0 70px;
+    border-bottom:5px solid #111111;
+}
+
+.cs-hero-row{
+    display:flex;
+    align-items:stretch;
+    width:100%;
+}
+
+.cs-hero-image{
+    width:50%;
+}
+
+.cs-hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.cs-hero-right{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+}
+
+.cs-hero-headline{
+    background:var(--cs-off-white);
+    display:flex;
+    align-items:center;
+    padding:55px 60px;
+}
+
+.cs-hero-headline h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    font-weight:500;
+    line-height:1.22;
+    color:var(--cs-dark);
+}
+
+.cs-hero-body{
+    background:var(--cs-lavender);
+    padding:45px 60px;
+    flex:1;
+}
+
+.cs-hero-body p{
+    font-size:14px;
+    line-height:1.75;
+    color:var(--cs-text-gray);
+    margin-bottom:16px;
+}
+
+.cs-drop-cap{
+    float:left;
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    line-height:0.78;
+    padding-right:10px;
+    padding-top:4px;
+    color:var(--cs-dark);
+}
+
+/* bracket button style: | READ MORE | */
+
+.cs-bracket-btn-wrap{
+    display:inline-flex;
+    align-items:stretch;
+    gap:12px;
+    margin-top:18px;
+    clear:both;
+}
+
+.cs-bracket-btn{
+    position:relative;
+    background:transparent;
+    border:1px solid var(--cs-dark);
+    color:var(--cs-dark);
+    padding:12px 22px;
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.cs-bracket-btn::before,
+.cs-bracket-btn::after{
+    content:"";
+    position:absolute;
+    top:0;
+    height:100%;
+    width:1px;
+    background:var(--cs-dark);
+}
+
+.cs-bracket-btn::before{ left:-12px; }
+.cs-bracket-btn::after{ right:-12px; }
+
+.cs-bracket-btn:hover{
+    background:var(--cs-dark);
+    color:#fff;
+}
+
+/* =========================================================
+   SECTION 2 — GATEWAY (DARK)
+========================================================= */
+
+.cs-gateway{
+    width:100%;
+    background:var(--cs-charcoal);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:90px 70px;
+    gap:50px;
+}
+
+.cs-gateway-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:80px;
+    font-weight:500;
+    color:#ffffff;
+    line-height:1.1;
+    width:55%;
+}
+
+.cs-gateway-text{
+    width:38%;
+    padding-top:8px;
+}
+
+.cs-gateway-text p{
+    font-size:14px;
+    line-height:1.85;
+    color:#d9d9d9;
+    margin-bottom:22px;
+}
+
+/* =========================================================
+   SECTION 3 — DIRECTORIES + HOW IT WORKS
+========================================================= */
+
+.cs-directories{
+    width:100%;
+    background:var(--cs-lavender);
+    padding:60px 70px;
+}
+
+.cs-directories p{
+    max-width:1750px;
+    margin:0 auto 20px;
+    font-size:14px;
+    line-height:1.85;
+    color:var(--cs-text-gray);
+}
+
+.cs-directories a{
+    color:var(--cs-link);
+    text-decoration:underline;
+}
+
+.cs-how{
+    width:100%;
+    background:var(--cs-bg-light);
+    padding:70px 70px 100px;
+}
+
+.cs-how h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    font-weight:500;
+    color:var(--cs-dark);
+    margin-bottom:26px;
+}
+
+.cs-how-intro{
+    font-size:14px;
+    line-height:1.85;
+    color:var(--cs-text-gray);
+    max-width:1600px;
+    margin-bottom:45px;
+}
+
+.cs-how-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px 70px;
+}
+
+.cs-how-item{
+    font-size:14px;
+    line-height:1.85;
+    color:var(--cs-text-gray);
+}
+
+.cs-how-item strong{
+    color:var(--cs-dark);
+}
+
+/* =========================================================
+   SECTION 4 — HIRE A MAKEUP ARTIST TODAY
+========================================================= */
+
+.cs-hire{
+    width:100%;
+}
+
+.cs-hire-bar{
+    width:100%;
+    background:#7c7c7c;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.cs-hire-bar h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    font-size:34px;
+    color:#ffffff;
+}
+
+.cs-hire-row{
+    display:flex;
+    align-items:stretch;
+    width:100%;
+}
+
+.cs-hire-image{
+    width:44%;
+}
+
+.cs-hire-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.cs-hire-right{
+    width:56%;
+    display:flex;
+    flex-direction:column;
+}
+
+.cs-hire-headline{
+    background:var(--cs-off-white);
+    display:flex;
+    align-items:center;
+    padding:55px 60px;
+}
+
+.cs-hire-headline h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:36px;
+    font-weight:500;
+    color:var(--cs-dark);
+    line-height:1.25;
+}
+
+.cs-hire-body{
+    background:var(--cs-lavender);
+    flex:1;
+    text-align:center;
+    padding:55px 40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.cs-hire-body p{
+    max-width:640px;
+    margin:0 auto 28px;
+    font-size:14px;
+    line-height:1.85;
+    color:var(--cs-text-gray);
+}
+
+.cs-hire-links{
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+    margin-bottom:38px;
+}
+
+.cs-hire-links a{
+    color:var(--cs-link);
+    text-decoration:underline;
+    font-size:14px;
+}
+
+.cs-outline-btn{
+    background:transparent;
+    border:1px solid var(--cs-dark);
+    color:var(--cs-dark);
+    padding:15px 34px;
+    font-size:11px;
+    letter-spacing:2.5px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.cs-outline-btn:hover{
+    background:var(--cs-dark);
+    color:#fff;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1200px){
+    .cs-hero-headline h1{ font-size:38px; }
+    .cs-gateway-title{ font-size:56px; }
+    .cs-hire-headline h3{ font-size:28px; }
+}
+
+@media (max-width:992px){
+    .cs-hero-row{ flex-direction:column; }
+    .cs-hero-image, .cs-hero-right{ width:100%; }
+    .cs-hero-image img{ height:400px; }
+    .cs-hero-headline{ padding:36px 24px; }
+    .cs-hero-body{ padding:30px 24px; }
+
+    .cs-gateway{ flex-direction:column; align-items:flex-start; }
+    .cs-gateway-title, .cs-gateway-text{ width:100%; }
+    .cs-gateway-title{ font-size:42px; }
+
+    .cs-how-grid{ grid-template-columns:1fr; }
+
+    .cs-hire-row{ flex-direction:column; }
+    .cs-hire-image, .cs-hire-right{ width:100%; }
+    .cs-hire-image img{ height:300px; }
+    .cs-hire-headline{ padding:36px 24px; }
+}
+
+@media (max-width:600px){
+    .cs-hero-headline h1{ font-size:28px; }
+    .cs-gateway-title{ font-size:32px; }
+    .cs-directories, .cs-how{ padding:45px 20px; }
+    .cs-hire-headline h3{ font-size:22px; }
+}
