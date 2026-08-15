@@ -29,7 +29,7 @@
   transform: translateY(0);
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (DESKTOP) ===== */
 .ol-hero {
   position: relative;
   display: flex;
@@ -326,35 +326,63 @@
   color: #2b2b33;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE (FIXED FOR MOBILE VIEW) ===== */
 @media (max-width: 900px) {
   .ol-hero {
     flex-direction: column;
     min-height: auto;
-  }
-
-  .ol-hero-image,
-  .ol-hero-right {
-    width: 100%;
+    background-color: #ffffff;
   }
 
   .ol-hero-image {
-    min-height: 380px;
+    width: 100%;
+    min-height: 320px;
+    height: 320px;
+    order: 1;
+  }
+
+  /* Title image ke theek neeche arrange kiya gaya */
+  .ol-hero-title {
+    position: static;
+    order: 2;
+    transform: none;
+    font-size: 44px;
+    letter-spacing: 2px;
+    clip-path: none;
+    animation: none;
+    text-align: left;
+    padding: 32px 20px 20px;
+    white-space: normal;
+    display: block;
+    background: transparent;
+  }
+
+  /* "Elovaa" light gray/silver color taaki background me contrast rahe */
+  .ol-hero-title .ol-title-light {
+    color: #d7d8db;
+  }
+
+  .ol-hero-title .ol-title-dark {
+    color: #2b2b33;
   }
 
   .ol-hero-right {
-    align-items: center;
-    padding: 30px 20px;
+    width: 100%;
+    order: 3;
+    align-items: flex-start;
+    padding: 36px 20px 48px;
+    background-color: #d9d8dd;
   }
 
-  .ol-hero-title {
-    top: 40%;
-    font-size: 32px;
-    letter-spacing: 2px;
+  .ol-hero-content {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    max-width: 100%;
   }
 
   .ol-about {
-    padding: 40px 24px;
+    padding: 40px 20px;
   }
 
   .ol-cta {

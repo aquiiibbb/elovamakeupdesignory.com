@@ -4,7 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-
 /* =========================================================
    GLOBAL
 ========================================================= */
@@ -34,9 +33,8 @@ body {
   --bg-light: #f6f6f7;
 }
 
-
 /* =========================================================
-   SECTION 1 — WELCOME HERO
+   SECTION 1 — WELCOME HERO (ORIGINAL DESKTOP)
 ========================================================= */
 
 .welcome-hero {
@@ -115,7 +113,6 @@ body {
   color: #d9dade;
 }
 
-
 /* =========================================================
    BUTTONS
 ========================================================= */
@@ -179,7 +176,6 @@ body {
   color: #ffffff;
 }
 
-
 /* =========================================================
    SECTION 2 — AUTO HORIZONTAL IMAGE SLIDER
 ========================================================= */
@@ -190,9 +186,6 @@ body {
   padding: 75px 0 65px;
   overflow: hidden;
 }
-
-
-/* Heading */
 
 .scroll-heading-wrap {
   text-align: center;
@@ -216,11 +209,6 @@ body {
   color: #888888;
 }
 
-
-/* =========================================================
-   IMAGE AUTO SCROLL
-========================================================= */
-
 .image-scroll-wrapper {
   width: 100%;
   overflow: hidden;
@@ -230,30 +218,12 @@ body {
 .image-scroll-track {
   display: flex;
   width: max-content;
-
-  /*
-    IMPORTANT:
-
-    We have two identical sets of images.
-
-    50% movement = exactly one complete set.
-    Therefore the animation restarts invisibly.
-  */
-
   animation: autoHorizontalScroll 32s linear infinite;
 }
-
-
-/* Pause when mouse is over gallery */
 
 .image-scroll-wrapper:hover .image-scroll-track {
   animation-play-state: paused;
 }
-
-
-/* =========================================================
-   IMAGE ITEM
-========================================================= */
 
 .scroll-image-item {
   flex: 0 0 30vw;
@@ -268,41 +238,25 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-
   filter: grayscale(100%);
-
   transition:
     transform 0.7s ease,
     filter 0.7s ease;
 }
-
-
-/* Image hover */
 
 .scroll-image-item:hover img {
   transform: scale(1.06);
   filter: grayscale(0%);
 }
 
-
-/* =========================================================
-   AUTO SLIDE ANIMATION
-========================================================= */
-
 @keyframes autoHorizontalScroll {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
   }
 }
-
-
-/* =========================================================
-   SECTION 2 DESCRIPTION
-========================================================= */
 
 .slider-caption {
   max-width: 1200px;
@@ -313,7 +267,6 @@ body {
   line-height: 1.9;
   color: var(--text-gray);
 }
-
 
 /* =========================================================
    SECTION 3 — CAREER PATHS
@@ -343,23 +296,14 @@ body {
   animation: autoZoom 9s ease-in-out infinite alternate;
 }
 
-
-/* Image zoom */
-
 @keyframes autoZoom {
   from {
     transform: scale(1);
   }
-
   to {
     transform: scale(1.12);
   }
 }
-
-
-/* =========================================================
-   CAREER TEXT
-========================================================= */
 
 .banner-text-wrap {
   display: flex;
@@ -388,7 +332,6 @@ body {
   color: var(--text-gray);
   margin-bottom: 26px;
 }
-
 
 /* =========================================================
    SECTION 4 — COURSES
@@ -432,11 +375,6 @@ body {
   margin-bottom: 25px;
 }
 
-
-/* =========================================================
-   COURSES IMAGES
-========================================================= */
-
 .courses-right {
   width: 52%;
   position: relative;
@@ -477,7 +415,6 @@ body {
   display: block;
 }
 
-
 /* =========================================================
    PAGE LOAD ANIMATIONS
 ========================================================= */
@@ -487,7 +424,6 @@ body {
     opacity: 0;
     transform: translateX(-90px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -499,7 +435,6 @@ body {
     opacity: 0;
     transform: translateX(90px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -511,20 +446,17 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-
 /* =========================================================
    RESPONSIVE — 1200px
 ========================================================= */
 
 @media (max-width: 1200px) {
-
   .welcome-title {
     font-size: 65px;
     left: 32%;
@@ -549,22 +481,20 @@ body {
   }
 }
 
-
 /* =========================================================
-   RESPONSIVE — 992px
+   RESPONSIVE — 992px & MOBILE (TITLE EXACTLY BELOW IMAGE)
 ========================================================= */
 
 @media (max-width: 992px) {
-
-  /* Hero */
-
+  /* 1. Container ko column order de rahe hain */
   .welcome-hero {
     flex-direction: column;
   }
 
-  .welcome-image,
-  .welcome-right {
+  /* ORDER 1: Hero Image */
+  .welcome-image {
     width: 100%;
+    order: 1;
   }
 
   .welcome-image img {
@@ -572,23 +502,32 @@ body {
     object-position: center center;
   }
 
+  /* ORDER 2: Welcome Title (Exact image ke niche) */
   .welcome-title {
     position: static;
-    padding: 30px 24px 10px;
-    font-size: 48px;
+    order: 2;
+    width: 100%;
+    padding: 35px 24px 15px;
+    font-size: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    line-height: 1.1;
+    pointer-events: auto;
   }
 
+  /* ORDER 3: Content / Paragraphs (Title ke baad) */
   .welcome-right {
-    padding: 30px 24px 60px;
+    width: 100%;
+    order: 3;
+    padding: 20px 24px 60px;
   }
 
   .welcome-content {
     max-width: 700px;
   }
 
-
   /* Auto slider */
-
   .elovaa-scroll-section {
     padding-top: 65px;
   }
@@ -607,9 +546,7 @@ body {
     animation-duration: 28s;
   }
 
-
   /* Career */
-
   .banner-images {
     flex-direction: column;
   }
@@ -628,9 +565,7 @@ body {
     padding: 30px 20px;
   }
 
-
   /* Courses */
-
   .courses-section {
     flex-direction: column;
     padding: 80px 40px;
@@ -647,55 +582,49 @@ body {
   }
 }
 
-
 /* =========================================================
-   RESPONSIVE — MOBILE
+   RESPONSIVE — MOBILE (UP TO 600px)
 ========================================================= */
 
 @media (max-width: 600px) {
-
-  /* =====================================================
-     HERO MOBILE
-  ===================================================== */
-
-  .welcome-image {
-    width: 100%;
-    overflow: hidden;
-  }
-
   .welcome-image img {
-    width: 100%;
-    height: 330px;
-
-    /*
-      IMPORTANT MOBILE FIX:
-      Image ko thoda right side se crop kar rahe hain,
-      jisse girl center me visible rahegi.
-    */
-    object-fit: cover;
-    object-position: 65% center;
+    height: 360px;
+    object-position: center 20%;
   }
 
+  /* Title image ke theek baad cleanly render hoga */
   .welcome-title {
-    font-size: 38px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3px;
+    font-size: 44px;
+    padding: 30px 20px 10px;
+    gap: 4px;
+  }
+
+  .title-dark {
+    color: #2b2b2b;
+  }
+
+  .title-light {
+    color: #cbccd1;
   }
 
   .welcome-right {
-    padding: 30px 22px 50px;
+    padding: 20px 20px 50px;
+  }
+
+  .welcome-eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
   }
 
   .welcome-content p {
-    font-size: 12px;
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 18px;
   }
 
-
-  /* =====================================================
-     AUTO SLIDER
-  ===================================================== */
-
+  /* Slider */
   .elovaa-scroll-section {
     padding: 55px 0 55px;
   }
@@ -730,11 +659,7 @@ body {
     margin-top: 35px;
   }
 
-
-  /* =====================================================
-     CAREER
-  ===================================================== */
-
+  /* Career */
   .banner-img-item {
     height: 230px;
   }
@@ -751,11 +676,7 @@ body {
     font-size: 13px;
   }
 
-
-  /* =====================================================
-     COURSES
-  ===================================================== */
-
+  /* Courses */
   .courses-section {
     padding: 65px 22px;
     gap: 40px;

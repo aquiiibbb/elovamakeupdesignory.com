@@ -29,7 +29,7 @@
   transform: translateY(0);
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (DESKTOP) ===== */
 .bl-hero {
   position: relative;
   display: flex;
@@ -135,6 +135,7 @@
   background-color: #2b2b33;
 }
 
+/* ===== HERO TITLE (DESKTOP) ===== */
 .bl-hero-title {
   position: absolute;
   top: 34%;
@@ -393,42 +394,84 @@
   background-color: #46464f;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE (MOBILE GAP FIX) ===== */
 @media (max-width: 900px) {
   .bl-hero,
   .bl-featured,
   .bl-newsletter {
     flex-direction: column;
+    min-height: auto;
   }
 
-  .bl-hero-image,
-  .bl-hero-right,
+  .bl-hero {
+    background-color: #ffffff;
+  }
+
+  /* 1. Hero Image */
+  .bl-hero-image {
+    width: 100%;
+    min-height: 320px;
+    height: 320px;
+    order: 1;
+    position: static;
+  }
+
+  .bl-hero-image img {
+    height: 100%;
+  }
+
+  /* 2. Title fills the gap cleanly below image */
+  .bl-hero-title {
+    position: static;
+    order: 2;
+    transform: none;
+    font-size: 44px;
+    letter-spacing: 2px;
+    clip-path: none;
+    animation: none;
+    text-align: left;
+    padding: 32px 20px 20px;
+    white-space: normal;
+    display: block;
+    background: transparent;
+  }
+
+  /* "Elovaa" light gray/silver color for contrast on white */
+  .bl-hero-title .bl-title-light {
+    color: #d7d8db;
+  }
+
+  .bl-hero-title .bl-title-dark {
+    color: #2b2b33;
+  }
+
+  /* 3. Hero Right Content */
+  .bl-hero-right {
+    width: 100%;
+    order: 3;
+    align-items: flex-start;
+    padding: 36px 20px 48px;
+    background-color: #d9d8dd;
+  }
+
+  .bl-hero-content {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    max-width: 100%;
+  }
+
   .bl-featured-image,
   .bl-featured-content {
     width: 100%;
   }
 
-  .bl-hero,
-  .bl-hero-image {
-    min-height: 380px;
-  }
-
-  .bl-hero-right {
-    align-items: center;
-    padding: 30px 20px;
-  }
-
-  .bl-hero-title {
-    font-size: 40px;
-    letter-spacing: 3px;
-  }
-
   .bl-featured-content {
-    padding: 40px 24px;
+    padding: 40px 20px;
   }
 
   .bl-grid-section {
-    padding: 50px 24px;
+    padding: 45px 20px;
   }
 
   .bl-grid {
@@ -436,7 +479,7 @@
   }
 
   .bl-newsletter {
-    padding: 40px 24px;
+    padding: 40px 20px;
   }
 
   .bl-newsletter-form {

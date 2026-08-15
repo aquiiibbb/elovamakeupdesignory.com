@@ -70,7 +70,7 @@ function WhereToBuy() {
             {TO_BUY_WORDS.map((word, wi) => (
               <span className="wb-word" key={wi}>
                 {word.split('').map((letter, li) => {
-                  const delay = 0.75 + letterIndex * 0.11;
+                  const delay = 0.4 + letterIndex * 0.12;
                   letterIndex += 1;
                   return (
                     <span

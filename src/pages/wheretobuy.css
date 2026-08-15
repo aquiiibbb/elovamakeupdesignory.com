@@ -16,7 +16,7 @@
   overflow-x: hidden;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (DESKTOP) ===== */
 .wb-hero {
   position: relative;
   display: flex;
@@ -143,7 +143,7 @@
   background-color: #2b2b33;
 }
 
-/* ---------- Hero title ---------- */
+/* ---------- Hero title (Desktop) ---------- */
 .wb-hero-title {
   position: absolute;
   top: 95px;
@@ -162,7 +162,7 @@
   z-index: 2;
 }
 
-/* "Where" — sits over the image, salmon/peach tone, slides open */
+/* "Where" — sits over the image, salmon/peach tone */
 .wb-title-where {
   color: rgba(236, 158, 133, 0.75);
   clip-path: inset(0 100% 0 0);
@@ -178,7 +178,7 @@
   }
 }
 
-/* "To Buy" — shatters in, letter by letter, and settles */
+/* "To Buy" — desktop fall animation */
 .wb-title-tobuy {
   color: #2b2b33;
   display: inline-flex;
@@ -267,47 +267,110 @@
   text-decoration: underline;
 }
 
+/* ===== MOBILE DROP ANIMATION ===== */
+@keyframes wbMobileFall {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px) rotate(-18deg) scale(0.85);
+    filter: blur(2px);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(8px) rotate(4deg) scale(1.05);
+    filter: blur(0);
+  }
+  85% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+    filter: none;
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .wb-hero {
     flex-direction: column;
     align-items: stretch;
+    background-color: #ffffff;
   }
 
-  .wb-hero-image,
+  /* 1. Image on Top */
+  .wb-hero-image {
+    width: 100%;
+    order: 1;
+    position: static;
+    height: 340px;
+  }
+
+  .wb-hero-image img {
+    min-height: 340px;
+    height: 340px;
+  }
+
+  /* 2. Title cleanly below Image */
+  .wb-hero-title {
+    position: static;
+    order: 2;
+    transform: none;
+    font-size: 44px;
+    letter-spacing: 2px;
+    padding: 32px 20px 18px;
+    gap: 12px;
+    white-space: normal;
+    background: transparent;
+    display: flex;
+    align-items: baseline;
+  }
+
+  /* "Where" (Peach color) */
+  .wb-title-where {
+    clip-path: none;
+    animation: none;
+    color: #f1aa93;
+  }
+
+  /* "To Buy" (Halka Black/Charcoal) */
+  .wb-title-tobuy {
+    gap: 12px;
+    margin-left: 0;
+    color: #2b2b33;
+    display: inline-flex;
+  }
+
+  .wb-word {
+    display: inline-flex;
+    color: #2b2b33;
+  }
+
+  /* Mobile Falling Animation on each letter */
+  .wb-letter {
+    display: inline-block;
+    color: #2b2b33;
+    opacity: 0;
+    animation: wbMobileFall 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  /* 3. Content Block below Title */
   .wb-hero-right {
     width: 100%;
+    order: 3;
+    padding: 30px 20px 50px;
+    background-color: #ececed;
   }
 
-  .wb-hero-image {
-    position: static;
-    height: 320px;
-  }
-
-  .wb-hero-right {
-    padding: 30px 20px;
-  }
-
-  .wb-hero-title {
-    top: auto;
-    position: relative;
-    left: auto;
+  .wb-hero-content {
+    opacity: 1;
     transform: none;
-    font-size: 32px;
-    letter-spacing: 2px;
-    padding: 20px;
-    gap: 10px;
-    white-space: normal;
-  }
-
-  .wb-title-tobuy {
-    gap: 10px;
-    margin-left: 10px;
+    animation: none;
+    max-width: 100%;
   }
 
   .wb-info-heading-wrap,
   .wb-info-body {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

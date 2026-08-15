@@ -29,7 +29,7 @@
   transform: translateY(0);
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (DESKTOP) ===== */
 .am-hero {
   position: relative;
   display: flex;
@@ -342,36 +342,71 @@
   text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE (MOBILE VIEW FIXED) ===== */
 @media (max-width: 900px) {
   .am-hero {
     flex-direction: column;
     min-height: auto;
+    background-color: #ffffff;
   }
 
-  .am-hero-image,
+  /* 1. Hero Image */
+  .am-hero-image {
+    width: 100%;
+    min-height: 320px;
+    height: 320px;
+    order: 1;
+    position: static;
+  }
+
+  .am-hero-image img {
+    height: 100%;
+  }
+
+  /* 2. Hero Title cleanly below Image */
+  .am-hero-title {
+    position: static;
+    order: 2;
+    transform: none;
+    font-size: 44px;
+    letter-spacing: 2px;
+    clip-path: none;
+    animation: none;
+    text-align: left;
+    padding: 32px 20px 20px;
+    white-space: normal;
+    display: block;
+    background: transparent;
+  }
+
+  /* "Elovaa" light silver/gray for clean contrast */
+  .am-hero-title .am-title-light {
+    color: #d7d8db;
+  }
+
+  .am-hero-title .am-title-dark {
+    color: #2b2b33;
+  }
+
+  /* 3. Hero Right Content Block */
   .am-hero-right {
     width: 100%;
+    order: 3;
+    align-items: flex-start;
+    padding: 36px 20px 48px;
+    background-color: #d9d8dd;
   }
 
-  .am-hero,
-  .am-hero-image {
-    min-height: 380px;
-  }
-
-  .am-hero-right {
-    align-items: center;
-    padding: 30px 20px;
-  }
-
-  .am-hero-title {
-    font-size: 32px;
-    letter-spacing: 1.5px;
+  .am-hero-content {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    max-width: 100%;
   }
 
   .am-about {
     flex-direction: column;
-    padding: 50px 24px;
+    padding: 50px 20px;
   }
 
   .am-about-image img {
@@ -390,15 +425,16 @@
   }
 
   .am-values {
-    padding: 50px 24px;
+    padding: 50px 20px;
   }
 
   .am-values-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .am-cta {
-    padding: 50px 24px;
+    padding: 50px 20px;
   }
 
   .am-cta-links {

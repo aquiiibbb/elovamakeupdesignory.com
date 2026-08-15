@@ -124,6 +124,7 @@
   background-color: #2b2b33;
 }
 
+/* ===== DESKTOP HERO TITLE (ORIGINAL GRADIENT LOOK) ===== */
 .cp-hero-title {
   position: absolute;
   top: 24%;
@@ -298,53 +299,89 @@
   .cp-hero,
   .cp-cta {
     flex-direction: column;
+    min-height: auto;
   }
 
-  .cp-hero-image,
-  .cp-hero-right,
+  .cp-hero {
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  .cp-hero-image {
+    width: 100%;
+    min-height: 320px;
+    height: 320px;
+    order: 1;
+  }
+
+  /* Mobile Title: Placed below Image with Dual Tone Color */
+  .cp-hero-title {
+    position: static;
+    order: 2;
+    transform: none;
+    font-size: 46px;
+    letter-spacing: 2px;
+    background: none;
+    -webkit-text-fill-color: initial;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    clip-path: none;
+    animation: none;
+    text-align: left;
+    padding: 30px 10px 18px;
+    white-space: normal;
+    display: block;
+  }
+
+  /* Two tone colors: Career (Dark) + Paths (Light Silver) */
+  .cp-hero-title .cp-title-dark {
+    color: #1c2430;
+  }
+
+  .cp-hero-title .cp-title-light {
+    color: #d7d8db;
+  }
+
+  .cp-hero-right {
+    width: 100%;
+    order: 3;
+    align-items: flex-start;
+    padding: 40px 24px 50px;
+  }
+
+  .cp-cta {
+    padding: 0 16px;
+    min-height: auto;
+  }
+
   .cp-cta-image,
   .cp-cta-content {
     width: 100%;
   }
 
-  .cp-hero,
-  .cp-hero-image {
-    min-height: 380px;
-  }
-
-  .cp-hero {
-    padding: 0 12px;
-  }
-
-  .cp-hero-right {
-    align-items: center;
-    padding: 30px 20px;
-  }
-
-  .cp-hero-title {
-    top: 42%;
-    font-size: 36px;
-    letter-spacing: 4px;
-  }
-
-  .cp-cta {
-    padding: 0 12px;
-    min-height: auto;
-  }
-
   .cp-cta-image {
-    min-height: 300px;
+    min-height: 280px;
+    height: 280px;
+  }
+
+  .cp-cta-content {
+    padding: 40px 24px;
+  }
+
+  .cp-cta-content h2 {
+    font-size: 32px;
   }
 
   .cp-jobs {
-    padding: 60px 30px;
+    padding: 60px 24px;
   }
 
   .cp-jobs-grid {
     grid-template-columns: 1fr;
+    row-gap: 32px;
   }
 
-  .cp-cta-content {
-    padding: 40px 30px;
+  .cp-elovaa-body {
+    padding: 35px 24px;
   }
 }

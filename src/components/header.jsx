@@ -67,7 +67,7 @@ function Header() {
         {/* LOGO WITH TAGLINE */}
         <a href="/" className="elovaa-header__logo-wrapper">
           <img src={logo} alt="ELOVAA Logo" className="elovaa-header__logo-img" />
-          <span className="elovaa-header__logo-tagline">KOLKATA MAKEUP ACADEMY</span>
+          <span className="elovaa-header__logo-tagline">Beauty Academy</span>
         </a>
 
         {/* DESKTOP NAVIGATION MENU */}

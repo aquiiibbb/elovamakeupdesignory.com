@@ -101,7 +101,7 @@ export default function ContactUs() {
               <div className="info-card">
                 <h3>Call Us</h3>
                 <div className="divider"></div>
-                <p>033-4000-5000</p>
+                <p>+91-7890009119</p>
                 <p className="mt-10"><strong>Across Kolkata:</strong></p>
                 <p>Telephone Directory</p>
               </div>

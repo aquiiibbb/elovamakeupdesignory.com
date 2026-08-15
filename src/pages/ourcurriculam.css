@@ -41,7 +41,7 @@
   clip-path: inset(0 0 0 0);
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (DESKTOP) ===== */
 .cu-hero {
   position: relative;
   display: flex;
@@ -108,7 +108,6 @@
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -422,35 +421,68 @@
   margin: 0;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE (FIXED FOR MOBILE VIEW) ===== */
 @media (max-width: 900px) {
   .cu-hero {
     flex-direction: column;
     min-height: auto;
-  }
-
-  .cu-hero-image,
-  .cu-hero-right {
-    width: 100%;
+    background-color: #ffffff;
   }
 
   .cu-hero-image {
-    min-height: 380px;
+    width: 100%;
+    min-height: 320px;
+    height: 320px;
+    order: 1;
+  }
+
+  /* Title image ke theek neeche natural flow me aayega */
+  .cu-hero-title {
+    position: static;
+    order: 2;
+    transform: none;
+    font-size: 44px;
+    letter-spacing: 2px;
+    clip-path: none;
+    animation: none;
+    text-align: left;
+    padding: 32px 20px 20px;
+    white-space: normal;
+    display: block;
+    background: transparent;
+  }
+
+  /* "Our" is now light gray so it stays visible on white */
+  .cu-hero-title .cu-title-light {
+    color: #d7d8db;
+  }
+
+  .cu-hero-title .cu-title-dark {
+    color: #2b2b33;
   }
 
   .cu-hero-right {
-    align-items: center;
-    padding: 30px 20px;
+    width: 100%;
+    order: 3;
+    align-items: flex-start;
+    padding: 36px 20px 48px;
+    background-color: #d9d8dd;
   }
 
-  .cu-hero-title {
-    top: 42%;
-    font-size: 34px;
-    letter-spacing: 3px;
+  .cu-hero-content {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    max-width: 100%;
   }
 
   .cu-path {
-    padding: 40px 24px;
+    padding: 40px 20px;
+  }
+
+  .cu-path-heading {
+    font-size: 32px;
+    margin-bottom: 24px;
   }
 
   .cu-path-body {
@@ -468,7 +500,7 @@
   .cu-commitment-left,
   .cu-commitment-right {
     width: 100%;
-    padding: 30px 24px;
+    padding: 30px 20px;
   }
 
   .cu-commitment-left h2 {
@@ -483,14 +515,20 @@
     width: 100%;
   }
 
+  .cu-row-image,
+  .cu-row-image img {
+    min-height: 280px;
+    height: 280px;
+  }
+
   .cu-row-content {
-    padding: 30px 24px;
+    padding: 30px 20px;
   }
 
   .cu-footer-grid {
     flex-direction: column;
     align-items: flex-start;
-    padding: 40px 24px;
+    padding: 40px 20px;
   }
 
   .cu-footer-right {

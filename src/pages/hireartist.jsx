@@ -37,7 +37,7 @@ function HireArtist() {
       <section className="ha-intro">
         <p>
           Hire an Elovaa graduate for your next production or project. Please
-          get in touch below or give us a call at +91 33 4000 5000
+          get in touch below or give us a call at +91-7890009119
         </p>
       </section>
 
@@ -104,7 +104,7 @@ function HireArtist() {
                 Contact Phone Number<span className="ha-required">*</span>
               </label>
               <div className="ha-phone-input">
-                <input type="tel" placeholder="E.g. +91 9800012345" required />
+                <input type="tel" placeholder="E.g. +91 7890009119" required />
                 <span className="ha-flag">&#127470;&#127475;</span>
               </div>
             </div>

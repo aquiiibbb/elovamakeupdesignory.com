@@ -9,10 +9,10 @@ function Home() {
 
       <section className="welcome-hero">
         <div className="welcome-image">
-       <img
-  src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1400&q=85"
-  alt="Beauty makeup portrait"
-/>
+          <img
+            src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1400&q=85"
+            alt="Beauty makeup portrait"
+          />
         </div>
 
         <div className="welcome-right">
@@ -55,13 +55,11 @@ function Home() {
         </h1>
       </section>
 
-
       {/* =====================================================
           SECTION 2 — ART BEAUTY AUTO SLIDER
       ===================================================== */}
 
       <section className="elovaa-scroll-section">
-
         <div className="scroll-heading-wrap">
           <h2 className="slider-heading">
             Art. Beauty. Craft. Kolkata. Elovaa.
@@ -72,15 +70,10 @@ function Home() {
           </p>
         </div>
 
-
         {/* AUTO SLIDING IMAGE GALLERY */}
-
         <div className="image-scroll-wrapper">
-
           <div className="image-scroll-track">
-
-            {/* ================= ORIGINAL IMAGES ================= */}
-
+            {/* ORIGINAL IMAGES */}
             <div className="scroll-image-item">
               <img
                 src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85"
@@ -123,11 +116,7 @@ function Home() {
               />
             </div>
 
-
-            {/* ================= DUPLICATE IMAGES =================
-                Required for seamless infinite animation
-            ===================================================== */}
-
+            {/* DUPLICATE IMAGES */}
             <div className="scroll-image-item">
               <img
                 src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85"
@@ -169,13 +158,10 @@ function Home() {
                 alt="Makeup artistry"
               />
             </div>
-
           </div>
         </div>
 
-
         {/* DESCRIPTION */}
-
         <p className="slider-caption">
           Elovaa is Kolkata's dedicated destination for aspiring makeup
           artists. We pair hands-on classroom training with a cosmetics
@@ -183,18 +169,14 @@ function Home() {
           professionals both leave equipped for real sets, real weddings,
           and real client work.
         </p>
-
       </section>
-
 
       {/* =====================================================
           SECTION 3 — CAREER PATHS / FIND LOCATION
       ===================================================== */}
 
       <section className="banner-split">
-
         <div className="banner-images">
-
           <div className="banner-img-item">
             <img
               src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=85"
@@ -208,98 +190,59 @@ function Home() {
               alt="Makeup studio"
             />
           </div>
-
         </div>
 
-
         <div className="banner-text-wrap">
-
           <div className="banner-text-item">
-
-            <h2>
-              Career Paths
-            </h2>
-
+            <h2>Career Paths</h2>
             <p>
               Learn how you can build a career as a makeup artist across
               bridal, film, editorial, and salon work. Our placement desk
               connects Kolkata graduates directly with studios and clients.
             </p>
-
-            <button className="box-btn">
-              START NOW
-            </button>
-
+            <button className="box-btn">START NOW</button>
           </div>
 
-
           <div className="banner-text-item">
-
-            <h2>
-              Find A Location
-            </h2>
-
+            <h2>Find A Location</h2>
             <p>
               Use our Elovaa Locator to find our studio and partner
               counters across Kolkata and the rest of West Bengal.
             </p>
-
-            <button className="box-btn">
-              SEARCH NOW
-            </button>
-
+            <button className="box-btn">SEARCH NOW</button>
           </div>
-
         </div>
-
       </section>
-
 
       {/* =====================================================
           SECTION 4 — COURSES WORLDWIDE
       ===================================================== */}
 
       <section className="courses-section">
-
         <div className="courses-left">
-
-          <h6 className="courses-eyebrow">
-            An Education In Make-Up
-          </h6>
-
-          <h2 className="courses-title">
-            Courses In Kolkata
-          </h2>
-
+          <h6 className="courses-eyebrow">An Education In Make-Up</h6>
+          <h2 className="courses-title">Courses In Kolkata</h2>
           <p>
             Join us at our main academy in Kolkata, along with our growing
             network of Elovaa partner studios across West Bengal. Every
             batch is kept small, so every student gets real time on real
             faces from day one.
           </p>
-
           <p>
             Our curriculum is built for the Indian film, television,
             fashion, and bridal industries. As an Elovaa student, you're
             trained by working artists from Tollywood sets, fashion shoots,
             salons, and the bridal circuit — not just textbooks.
           </p>
-
           <p>
             From prosthetics and SFX basics to everyday bridal and party
             makeup, we walk you through it hands-on. At Elovaa, we back
             your talent with real technique, so you leave ready to work.
           </p>
-
-          <button className="line-btn">
-            EXPLORE OUR COURSES
-          </button>
-
+          <button className="line-btn">EXPLORE OUR COURSES</button>
         </div>
 
-
         <div className="courses-right">
-
           <div className="courses-img-large">
             <img
               src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85"
@@ -313,9 +256,7 @@ function Home() {
               alt="Beauty makeup"
             />
           </div>
-
         </div>
-
       </section>
     </>
   );

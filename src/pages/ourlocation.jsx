@@ -77,9 +77,7 @@ function OurLocation() {
 
         <h1 className="ol-hero-title">
           <span className="ol-title-light">Elovaa</span>{' '}
-          <span className="ol-title-dark">
-            Makeup Schools
-          </span>
+          <span className="ol-title-dark">Makeup Schools</span>
         </h1>
       </section>
 

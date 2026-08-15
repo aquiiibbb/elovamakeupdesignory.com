@@ -31,7 +31,7 @@ const Footer = () => {
           <a href="/" className="footer-brand-logo">
             <img src={logo} alt="ELOVAA Logo" className="footer-logo-img" />
           </a>
-          <p className="footer-tagline">kolkata makeup academy</p>
+          <p className="footer-tagline">Beauty Academy</p>
 
           <div className="social-icons">
             <a href="#" aria-label="Facebook"><FaFacebookF /></a>
@@ -55,7 +55,7 @@ const Footer = () => {
             </li>
             <li>
               <FaPhoneAlt className="footer-icon" />
-              <a href="tel:03340005000">+91-9883330353</a>
+              <a href="tel: 7890009119">+91-7890009119</a>
             </li>
             <li>
               <FaEnvelopeOpenText className="footer-icon" />
