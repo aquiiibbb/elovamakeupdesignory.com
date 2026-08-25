@@ -589,7 +589,7 @@ body {
 @media (max-width: 600px) {
   .welcome-image img {
     height: 360px;
-    object-position: center 20%;
+    object-position: center 60%;
   }
 
   /* Title image ke theek baad cleanly render hoga */
