@@ -1,4 +1,12 @@
 import "./home.css";
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.png';
+import img5 from '../assets/5.png';
+import img6 from '../assets/6.jpeg';
+import img7 from '../assets/7.jpeg';
+import img8 from '../assets/8.jpeg';
 
 function Home() {
   return (
@@ -76,42 +84,42 @@ function Home() {
             {/* ORIGINAL IMAGES */}
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85"
+                src={img1}
                 alt="Professional makeup artistry"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85"
+                src={img2}
                 alt="Beauty makeup products"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1000&q=85"
+                src={img3}
                 alt="Makeup brushes and cosmetics"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1000&q=85"
+                src={img4}
                 alt="Makeup cosmetics"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1583241800698-e8ab01830a07?auto=format&fit=crop&w=1000&q=85"
+                src={img5}
                 alt="Professional beauty artist"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=85"
+                src={img6}
                 alt="Makeup artistry"
               />
             </div>
@@ -119,35 +127,35 @@ function Home() {
             {/* DUPLICATE IMAGES */}
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85"
+                src={img7}
                 alt="Professional makeup artistry"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85"
+                src={img8}
                 alt="Beauty makeup products"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1000&q=85"
+                src={img1}
                 alt="Makeup brushes and cosmetics"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1000&q=85"
+                        src={img2}
                 alt="Makeup cosmetics"
               />
             </div>
 
             <div className="scroll-image-item">
               <img
-                src="https://images.unsplash.com/photo-1583241800698-e8ab01830a07?auto=format&fit=crop&w=1000&q=85"
+                src={img3}
                 alt="Professional beauty artist"
               />
             </div>
@@ -245,14 +253,14 @@ function Home() {
         <div className="courses-right">
           <div className="courses-img-large">
             <img
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85"
+              src={img6}
               alt="Professional makeup studio"
             />
           </div>
 
           <div className="courses-img-small">
             <img
-              src="https://images.unsplash.com/photo-1503236823255-94609f598e71?auto=format&fit=crop&w=800&q=85"
+              src={img1}
               alt="Beauty makeup"
             />
           </div>
