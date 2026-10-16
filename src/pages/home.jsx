@@ -7,6 +7,7 @@ import img5 from '../assets/5.png';
 import img6 from '../assets/6.jpeg';
 import img7 from '../assets/7.jpeg';
 import img8 from '../assets/8.jpeg';
+import ChatBot from '../components/chatbot';
 
 function Home() {
   return (
@@ -266,6 +267,9 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Customer Support Chatbot */}
+      <ChatBot />
     </>
   );
 }
